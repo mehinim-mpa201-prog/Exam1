@@ -20,6 +20,11 @@ public class AccountController : Controller
         _configuration = configuration;
     }
 
+    [HttpGet]
+    public IActionResult Register()
+    {
+        return View();
+    }
 
     [HttpPost]
     public async Task<IActionResult> Register(RegisterVM registerVM)
